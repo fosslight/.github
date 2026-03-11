@@ -20,7 +20,7 @@ jobs:
         uses: tim-actions/commit-message-checker-with-regex@v0.3.2
         with:
           commits: ${{ steps.get-pr-commits.outputs.commits }}
-          pattern: '^(feat|fix|docs|style|refactor|test|chore|ci|build|perf)(\(\S+\))?: [^\\r\\n]+$ '
+          pattern: '^(feat|fix|docs|style|refactor|test|chore|ci|build|perf)(\(\S+\))?: [^\\r\\n]+'
           error: 'Commit message must follow Conventional Commits format'
       - name: Check Body Line Length
         if: ${{ success() || failure() }}
